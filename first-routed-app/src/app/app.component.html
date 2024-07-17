@@ -1,2 +1,15 @@
 <br>
 <h1 class="text-center text-primary">FIRST ROUTED APP - SPOTIFY</h1>
+<br>
+<div style="margin: 5px;">
+    <h1>Search</h1>
+
+    <p>
+      <input type="text" #newquery>
+      <button (click)="submit(newquery)">Search</button>
+    </p>
+    
+    <div *ngIf="results"> 
+       {{results | json}}
+    </div>
+</div>
