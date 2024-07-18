@@ -1,0 +1,4 @@
+export const environment = {
+    production: false,
+    tokenn: "Bearer BQDhJAp6uUh9rIWs5WBZfCI7VUn0OtDdTvdtIOvqn5OCNAuL-RIZIP62flIodJdRX1TsS8zcGqFeOL3B5Ipx9a78_M2tuJR5wZN1oSkgwDdXYPhvoKZT4BoSyNgPiQHawbAGVd4bIfFQ5tBbxLlNXRFUptIsl8Br9FpaI2vLL6WMpuc8nP3rtb_hl_7mdP_gHOH0P6eUNBF69nvltr0bYhEvYY6tP7P56hFyzPE3Os-3TGfes_9hPpRpAha9Y5lcjJLGK8bCujlIbBIgZ4HAYd7Xst8t1qo4wN5ayemkDV5n16VD_NEELsuweky1G41DY7UF1bmv4Q"
+};
