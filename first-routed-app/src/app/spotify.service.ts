@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment.development';
 
 //inietto il servizio a tutti i componenti
 @Injectable({
@@ -14,19 +13,25 @@ export class SpotifyService {
     searchTrack(query: string) {
       const url = `https://api.spotify.com/v1/search?q=${query}&type=track`;
       const headers = new HttpHeaders({Authorization: 
-        'Bearer BQDhJAp6uUh9rIWs5WBZfCI7VUn0OtDdTvdtIOvqn5OCNAuL-RIZIP62flIodJdRX1TsS8zcGqFeOL3B5Ipx9a78_M2tuJR5wZN1oSkgwDdXYPhvoKZT4BoSyNgPiQHawbAGVd4bIfFQ5tBbxLlNXRFUptIsl8Br9FpaI2vLL6WMpuc8nP3rtb_hl_7mdP_gHOH0P6eUNBF69nvltr0bYhEvYY6tP7P56hFyzPE3Os-3TGfes_9hPpRpAha9Y5lcjJLGK8bCujlIbBIgZ4HAYd7Xst8t1qo4wN5ayemkDV5n16VD_NEELsuweky1G41DY7UF1bmv4Q'
+          'Bearer BQCzz31i6VkU7J2AwFolFnE26a4WF4VDFy-SC_szkf_trb1tw52AoDCaTQBtM0WY4EjsW--GzMYv4nP0cd3Ad1-q6ybz1DIAP36-0NBRX-r4NUOhphe-AyUdt-ery1FtcuH-nicsvdv4ea-gj-lC9L4_nYs0qk7WHU-iRo-X57tDObhIkmwHrsIcS4gElalZT9NFxik-6su9r0QuMSD3imFfJ9stLsOEBkNcE8prW_FZ2Wm2IHCkrdvCfkxe6vAugBVLSdqg_wBc7HJLojVfs4oeDQmAQZJcxIcT4wXPlyRWLnFAkauXPbx6lMrANg-lH1Uu4oSuDw'
       });
 
       let obsTracks = this.http.get(url, { headers });
       return obsTracks;
-  //Ritorno un observable ai componenti che richiedono il servizio
+      //Ritorno un observable ai componenti che richiedono il servizio
     }
     getTrack(id: string) {
       const url = `https://api.spotify.com/v1/tracks/${id}`;
       const headers = new HttpHeaders({ Authorization:
-          'Bearer BQDhJAp6uUh9rIWs5WBZfCI7VUn0OtDdTvdtIOvqn5OCNAuL-RIZIP62flIodJdRX1TsS8zcGqFeOL3B5Ipx9a78_M2tuJR5wZN1oSkgwDdXYPhvoKZT4BoSyNgPiQHawbAGVd4bIfFQ5tBbxLlNXRFUptIsl8Br9FpaI2vLL6WMpuc8nP3rtb_hl_7mdP_gHOH0P6eUNBF69nvltr0bYhEvYY6tP7P56hFyzPE3Os-3TGfes_9hPpRpAha9Y5lcjJLGK8bCujlIbBIgZ4HAYd7Xst8t1qo4wN5ayemkDV5n16VD_NEELsuweky1G41DY7UF1bmv4Q'
+          'Bearer BQCzz31i6VkU7J2AwFolFnE26a4WF4VDFy-SC_szkf_trb1tw52AoDCaTQBtM0WY4EjsW--GzMYv4nP0cd3Ad1-q6ybz1DIAP36-0NBRX-r4NUOhphe-AyUdt-ery1FtcuH-nicsvdv4ea-gj-lC9L4_nYs0qk7WHU-iRo-X57tDObhIkmwHrsIcS4gElalZT9NFxik-6su9r0QuMSD3imFfJ9stLsOEBkNcE8prW_FZ2Wm2IHCkrdvCfkxe6vAugBVLSdqg_wBc7HJLojVfs4oeDQmAQZJcxIcT4wXPlyRWLnFAkauXPbx6lMrANg-lH1Uu4oSuDw'
       });
-      
+      return this.http.get(url, { headers });
+    }
+    getArtist(id: string) {
+      const url = `https://api.spotify.com/v1/artists/${id}`;
+      const headers = new HttpHeaders({ Authorization:
+          'Bearer BQCzz31i6VkU7J2AwFolFnE26a4WF4VDFy-SC_szkf_trb1tw52AoDCaTQBtM0WY4EjsW--GzMYv4nP0cd3Ad1-q6ybz1DIAP36-0NBRX-r4NUOhphe-AyUdt-ery1FtcuH-nicsvdv4ea-gj-lC9L4_nYs0qk7WHU-iRo-X57tDObhIkmwHrsIcS4gElalZT9NFxik-6su9r0QuMSD3imFfJ9stLsOEBkNcE8prW_FZ2Wm2IHCkrdvCfkxe6vAugBVLSdqg_wBc7HJLojVfs4oeDQmAQZJcxIcT4wXPlyRWLnFAkauXPbx6lMrANg-lH1Uu4oSuDw'
+      });
       return this.http.get(url, { headers });
     }
 
