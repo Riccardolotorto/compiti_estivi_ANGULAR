@@ -1,1 +1,3 @@
-export const environment = {};
+export const environment = {
+    tokenn: "Bearer BQBBtiUGElndCTUwPaY5uGXWWAM-dQqSndDPjRuOJZhpQl72Y7tjgCltdPC4BplzpvGPjgyM8iXxEoa9-abQfPBPhuDR_yFEhyUc97jMDxl_HTffjtqqw6VfkujDpVi2HlgdoG8gHmbRxy42GL9IvtjrpOnnsYoQxrxuyAnUYPgmHgqD2TlahLOCXxgOTSSfNP21ShKckNXdepRCxLERrvdqzzPUzJitaRBUWdRrHvmTgTDH9J-6-AdkhPgt2q514ZlluAm41kZnkwoQur5uDzFI6GYR-Hpi-ZpH4THntzNqus3qq2dRMkkHWVnENnnkYAIBsEvVoQ"
+};
