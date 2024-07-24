@@ -19,6 +19,7 @@ export class SearchComponent {
       return;
     }
     this.query = query.value;
+    this.size = size.value;
     this.obsProduct = this.food.searchProduct(this.query, this.size);
     this.obsProduct.subscribe((data) => { this.results = data; console.log(this.results) });
   }
