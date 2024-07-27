@@ -23,4 +23,10 @@ export class SearchComponent {
     this.obsProduct = this.food.searchProduct(this.query, this.size);
     this.obsProduct.subscribe((data) => { this.results = data; console.log(this.results) });
   }
+  renderResults(res: any): void {
+    this.results = null;
+    if (res && res.products && res.products.items) {
+      this.results = res.products.items;
+    }
+  }
 }
