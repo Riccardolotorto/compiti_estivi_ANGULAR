@@ -29,4 +29,7 @@ export class ProductComponent implements OnInit{
       this.spotifyServicePrObs = this.service.getProduct(String(prId));
       this.spotifyServicePrObs.subscribe((data)=> this.product = data);
   }
+  back() {
+    this.location.back()
+  }
 }

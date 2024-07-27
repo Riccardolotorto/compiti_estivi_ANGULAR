@@ -2,8 +2,8 @@
     <h1>Search</h1>
     <p>
     <input type="text" name="query" #newquery><br>
-    <input type="text" name="size" #newsize><br>
-    <button (click)="submit(newquery, newsize)">Search</button>
+    <input type="text" name="size" #newsize><br><br>
+    <button class="btn btn-primary" (click)="submit(newquery, newsize)">Search</button>
     </p>
         
     <div *ngIf="results">
