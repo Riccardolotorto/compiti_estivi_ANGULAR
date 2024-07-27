@@ -15,4 +15,8 @@ export class FoodService {
       return this.http.get(url);
       //Ritorno un observable ai componenti che richiedono il servizio
   }
+  getProduct(id: string) {
+      const url = `https://world.openfoodfacts.org/api/v0/product/${id}`;
+      return this.http.get(url);
+  }
 }
