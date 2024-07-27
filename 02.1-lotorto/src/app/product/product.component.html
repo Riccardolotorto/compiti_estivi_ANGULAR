@@ -1,1 +1,7 @@
-{{product | json}}
+<div *ngIf="product">
+    <h3 class="text-primary">{{ product.product.abbreviated_product_name_fr_imported }}</h3>
+    <p>
+        <img src="{{product.product.image_thumb_url}}">
+    </p>
+    <!--<p><a href (click)="back()">Back</a></p>-->
+</div>
