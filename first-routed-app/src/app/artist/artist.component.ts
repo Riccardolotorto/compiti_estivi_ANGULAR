@@ -27,7 +27,7 @@ export class ArtistComponent implements OnInit {
       let artistId = params.get('id');
       console.log(artistId);
       this.spotifyServiceArtObs = this.service.getArtist(String(artistId));
-      this.spotifyServiceArtObs.subscribe((data)=> this.artist = data);
+      this.spotifyServiceArtObs.subscribe((data)=> {this.artist = data; console.log(this.artist)});
   }
   back() {
     this.location.back();
