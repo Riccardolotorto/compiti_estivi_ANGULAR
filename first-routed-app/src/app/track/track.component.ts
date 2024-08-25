@@ -27,7 +27,7 @@ export class TrackComponent implements OnInit {
 
 
   ngOnInit(): void {
-    //Ottengo l'observable che notifica le informazioni sulla route attiva
+    //Ottengo l'observable che notifica le informazioni sulla route attiva. Salva i parametri sulla rotta attiva
     this.routeObs = this.route.paramMap;
     this.routeObs.subscribe(this.getRouterParam);
   }

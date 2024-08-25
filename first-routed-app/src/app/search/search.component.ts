@@ -23,7 +23,7 @@ export class SearchComponent {
     }
     this.query = query.value;
     this.obsTrack = this.spotify.searchTrack(this.query);
-    this.obsTrack.subscribe((data) => { this.results = data; console.log(this.results) });
+    this.obsTrack.subscribe((data) => { this.results = data; console.log(this.results) });   //salvo nella variabile results ciò che ottengo dall'observable 
   }
 
   renderResults(res: any): void {

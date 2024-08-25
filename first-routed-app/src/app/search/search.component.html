@@ -9,7 +9,8 @@
   <div *ngIf="!results.tracks || results.tracks.items.length ==0">
     No tracks were found with the term '{{ query }}'
   </div>
-
+  
+  <!--se vengono trovate delle tracce, vengono mostrate le corrispondenti informazioni: immagine, artisa e album-->
   <div *ngIf="results.tracks &&  results.tracks.items.length > 0">
     <h1>Results</h1>
     <div class="row">

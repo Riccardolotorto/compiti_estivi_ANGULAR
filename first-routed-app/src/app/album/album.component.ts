@@ -27,7 +27,7 @@ export class AlbumComponent {
         let albumId = params.get('id');
         console.log(albumId);
         this.spotifyServiceAlbObs = this.service.getAlbum(String(albumId));
-        this.spotifyServiceAlbObs.subscribe((data)=> this.album = data);
+        this.spotifyServiceAlbObs.subscribe((data)=> {this.album = data; console.log(this.album)});
     }
     back() {
       this.location.back();
